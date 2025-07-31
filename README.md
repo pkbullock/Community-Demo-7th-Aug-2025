@@ -1,1 +1,1 @@
-# Community-Demo-7th-Aug-2025
+# Repository for community demo - Wahoo!
