@@ -1,0 +1,18 @@
+title: Agent Demo
+description: 'Configuring the agent app'
+version: 2
+demos: 
+   - title: Copy Images
+     description: Create a sample.json file with some content.
+     icons:
+       start: file-code
+       end: pass-filled
+     steps:
+      - action: copy
+        path: ./assets/outline.png
+        dest: ./Agent/PnP Script Samples Agent/appPackage/outline.png
+        overwrite: true
+      - action: copy
+        path: ./assets/color.png
+        dest: ./Agent/PnP Script Samples Agent/appPackage/color.png
+        overwrite: true
