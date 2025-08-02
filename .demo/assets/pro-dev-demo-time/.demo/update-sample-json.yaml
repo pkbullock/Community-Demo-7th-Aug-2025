@@ -1,0 +1,167 @@
+title: Updating sample.json
+description: 'Demonstration of a sample.json updates'
+version: 2
+demos:
+    - title: Open sample.json
+      steps:
+        - action: open
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+    - title: Highlight YOUR-SAMPLE-NAME token
+      steps:
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 3,34:3,50
+        - action: waitForTimeout
+          timeout: 1500
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 7
+        - action: waitForTimeout
+          timeout: 1500
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 8
+        - action: waitForTimeout
+          timeout: 1500
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 39
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+        - action: executeVSCodeCommand
+          command: 'editor.action.startFindReplaceAction'
+          args:
+            query: "YOUR-SAMPLE-NAME"
+            replace: "da-PnPScriptSamplesAgent"
+    - title: Highlight YOUR-SAMPLE-TITLE token
+      steps:
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 5
+        - action: waitForTimeout
+          timeout: 1500
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 5
+        - action: executeVSCodeCommand
+          command: 'editor.action.startFindReplaceAction'
+          args:
+            query: "YOUR-SAMPLE-TITLE"
+            replace: "PnP Script Samples Agent"
+    - title: Update dates
+      steps:
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 12:13
+        - action: waitForTimeout
+          timeout: 1000
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 12
+          content: "    \"creationDateTime\": \"2025-08-07\","
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 13
+          content: "    \"updateDateTime\": \"2024-10-07\","
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+    - title: Update Metadata
+      steps:
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 17:34
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 20
+          content: "        \"value\": \"Copilot\""
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: waitForTimeout
+          timeout: 1000
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 24
+          content: "        \"value\": \"JSON\""
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: waitForTimeout
+          timeout: 1000
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 28
+          content: "        \"value\": \"No\""
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: waitForTimeout
+          timeout: 1000
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+    - title: Update thumbnail
+      steps:
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 36:41
+        - action: waitForTimeout
+          timeout: 1000
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 39
+          content: "        \"url\": \"https://github.com/pnp/copilot-pro-dev-samples/raw/main/templates/pending-image.png\","
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: waitForTimeout
+          timeout: 1000
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+    - title: Remove Video thumbnail
+      steps:
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 42:47
+        - action: waitForTimeout
+          timeout: 1500
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 41:47
+          content: "      }"
+        - action: waitForTimeout
+          timeout: 1000
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+    - title: Update Authors
+      steps:
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 43:48
+        - action: waitForTimeout
+          timeout: 1000
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 45
+          content: "        \"gitHubAccount\": \"pkbullock\","
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: waitForTimeout
+          timeout: 1000
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 46
+          content: "        \"pictureUrl\": \"https://github.com/pkbullock.png\","
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: waitForTimeout
+          timeout: 1000
+        - action: replace
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 47
+          content: "        \"name\": \"Paul Bullock\""
+          insertTypingMode: 'instant'
+          insertTypingSpeed: 20
+        - action: waitForTimeout
+          timeout: 1000
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"

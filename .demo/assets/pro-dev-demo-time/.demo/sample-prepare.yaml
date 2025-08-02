@@ -1,0 +1,35 @@
+title: Sample Prepare
+description: 'Demonstration of a sample preparation process for this repository.'
+version: 2
+demos: 
+  - title: Rename folder
+    steps:
+       - action: executeTerminalCommand
+         command: "cd samples"
+         autoExecute: true
+         insertTypingMode: instant
+         insertTypingSpeed: 100
+       - action: executeTerminalCommand
+         command: "mv 'PnP Script Samples Agent' da-PnPScriptSamplesAgent"
+         autoExecute: false
+         insertTypingMode: instant
+         insertTypingSpeed: 100
+       - action: executeTerminalCommand
+         command: "cd da-PnPScriptSamplesAgent"
+         autoExecute: true
+         insertTypingMode: instant
+         insertTypingSpeed: 100
+  - title: Create assets folder
+    steps:
+       - action: executeTerminalCommand
+         command: "md assets"
+         autoExecute: true
+         insertTypingMode: instant
+         insertTypingSpeed: 100
+  - title: Copy sample-template.json
+    steps:
+       - action: executeTerminalCommand
+         command: "cp ../../templates/sample-template.json assets/sample.json"
+         autoExecute: false
+         insertTypingMode: instant
+         insertTypingSpeed: 100
