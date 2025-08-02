@@ -1,0 +1,19 @@
+    "capabilities": [
+        {
+            "name": "WebSearch",
+            "sites": [
+                {
+                    "url": "https://pnp.github.io/script-samples"
+                },
+                {
+                    "url": "https://github.com/pnp/script-samples"
+                }
+            ]
+        },
+        {
+            "name": "GraphicArt"
+        },
+        {
+            "name": "CodeInterpreter"
+        }
+    ],

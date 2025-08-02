@@ -1,0 +1,15 @@
+    "conversation_starters": [
+        {
+            "title": "Find a script",
+            "text": "Please fine the folowing script in the site"
+        },
+        {
+            "title": "Create a example image from the script",
+            "text": "Generate an image based on the purpose of the script ensure if has a Microsoft Terminal window. "
+        },
+        {
+            "title": "Suggest a code sample",
+            "text": "Write a code sample for the following purpose: Find an item in SharePoint"
+        }
+    ]
+}

@@ -21,7 +21,7 @@ demos:
         path: ./.demo/assets/color.png
         dest: ./Agent/PnP Script Samples Agent/appPackage/color.png
         overwrite: true
-  - title: Populate Instructions
+  - title: Populate instructions.txt
     description: Adding the body of the instrauctions for the agent
     steps:
       - action: open
@@ -35,7 +35,7 @@ demos:
         contentPath: "./.demo/assets/instruction.txt"
         insertTypingMode: 'line-by-line'
         insertTypingSpeed: 50
-  - title: Update Manifest
+  - title: Update manifest.json
     description: Update the manifest.json file with the new app details.
     steps:
       - action: open
@@ -99,3 +99,56 @@ demos:
       - action: positionCursor
         path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
         position: end
+  - title: Update declarativeAgent.json
+    description: Update the declarativeAgent.json file with the new app details.
+    steps:
+       - action: open
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+       - action: highlight
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: 5
+       - action: replace
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: 5
+         content: "    \"description\": \"Agent for Copilot for Microsoft 365, is designed to assist users with PowerShell scripts related to PnP Script Samples. This agent reviews existing scripts, analyzes them for potential improvements, and helps build supporting documentation. By leveraging the capabilities of Microsoft 365 Copilot, the agent provides insightful suggestions and streamlines the development process, ensuring scripts are optimized and well-documented.\","
+         insertTypingMode: 'instant'
+         insertTypingSpeed: 20
+       - action: waitForTimeout
+         timeout: 1000
+       - action: insert
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: "6"
+         content: "    \"instructions\": \"$[file('instruction.txt')]\",\n"
+         insertTypingMode: 'instant'
+         insertTypingSpeed: 20
+       - action: waitForTimeout
+         timeout: 1000
+       - action: unselect
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+       - action: insert
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: "7"
+         contentPath: "./.demo/assets/declarative-agent-capabilities.txt"
+         insertTypingMode: 'instant'
+         insertTypingSpeed: 20
+       - action: highlight
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: 7:25
+       - action: waitForTimeout
+         timeout: 2000
+       - action: unselect
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+       - action: insert
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: "26"
+         contentPath: "./.demo/assets/declarative-agent-conversation-starters.txt"
+         insertTypingMode: 'instant'
+         insertTypingSpeed: 20
+       - action: highlight
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: 26:39
+       - action: waitForTimeout
+         timeout: 2000
+       - action: unselect
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+       
