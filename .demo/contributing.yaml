@@ -1,0 +1,57 @@
+title: Contributing to Repo
+description: Working with the Copilot Pro Dev Samples repo
+version: 2
+demos:
+   - title: Open the community repo
+     steps:
+       - action: openWebsite
+         url: https://github.com/pnp/copilot-pro-dev-samples
+         openInVSCode: false
+   - title: Open the fork repo
+     steps:
+       - action: openWebsite
+         url: https://github.com/pkbullock/copilot-pro-dev-samples
+         openInVSCode: false
+   - title: Clone the repo
+     steps:
+      - action: executeTerminalCommand
+        command: "cd .."
+        autoExecute: true
+        insertTypingMode: instant
+        insertTypingSpeed: 100
+      - action: executeTerminalCommand
+        command: git clone https://github.com/pkbullock/copilot-pro-dev-samples.git
+        autoExecute: false
+        insertTypingMode: instant
+        insertTypingSpeed: 100
+      - action: executeTerminalCommand
+        command: dir
+        autoExecute: true
+        insertTypingMode: instant
+        insertTypingSpeed: 100
+   - title: Copy the agent to Copilot Pro Dev Samples
+     steps:
+      # - action: executeTerminalCommand
+      #   command: "cd Community-Demo-7th-Aug-2025"
+      #   autoExecute: true
+      #   insertTypingMode: instant
+      #   insertTypingSpeed: 100
+      - action: executeTerminalCommand
+        command: "cp -r 'Community-Demo-7th-Aug-2025/Agent/PnP Script Samples Agent' copilot-pro-dev-samples/Samples/"
+        autoExecute: true
+        insertTypingMode: instant
+        insertTypingSpeed: 100
+   - title: Navigate to the cloned repo
+     steps:
+      - action: executeTerminalCommand
+        command: "cd copilot-pro-dev-samples"
+        autoExecute: true
+        insertTypingMode: instant
+        insertTypingSpeed: 100
+   - title: Open VS Code in Copilot Pro Dev Samples
+     steps:
+      - action: executeTerminalCommand
+        command: "code ."
+        autoExecute: true
+        insertTypingMode: instant
+        insertTypingSpeed: 100
