@@ -1,18 +1,101 @@
 title: Agent Demo
-description: 'Configuring the agent app'
+description: Configuring the agent app
 version: 2
-demos: 
-   - title: Copy Images
-     description: Create a sample.json file with some content.
-     icons:
-       start: file-code
-       end: pass-filled
-     steps:
+demos:
+  - title: Copy App Name to Clipboard
+    steps:
+      - action: copyToClipboard
+        content: PnP Script Samples Agent
+        description: Copy the app name to clipboard
+  - title: Copy Images
+    description: Create a sample.json file with some content.
+    icons:
+      start: file-code
+      end: pass-filled
+    steps:
       - action: copy
-        path: ./assets/outline.png
+        path: ./.demo/assets/outline.png
         dest: ./Agent/PnP Script Samples Agent/appPackage/outline.png
         overwrite: true
       - action: copy
-        path: ./assets/color.png
+        path: ./.demo/assets/color.png
         dest: ./Agent/PnP Script Samples Agent/appPackage/color.png
         overwrite: true
+  - title: Populate Instructions
+    description: Adding the body of the instrauctions for the agent
+    steps:
+      - action: open
+        path: "./Agent/PnP Script Samples Agent/appPackage/instruction.txt"
+      - action: delete
+        path: "./Agent/PnP Script Samples Agent/appPackage/instruction.txt"
+        position: "start:end"
+      - action: replace
+        path: "./Agent/PnP Script Samples Agent/appPackage/instruction.txt"
+        position: 1
+        contentPath: "./.demo/assets/instruction.txt"
+        insertTypingMode: 'line-by-line'
+        insertTypingSpeed: 50
+  - title: Update Manifest
+    description: Update the manifest.json file with the new app details.
+    steps:
+      - action: open
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+      - action: highlight
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: 7:10
+      - action: replace
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: 7
+        content: "        \"name\": \"PnP Script Samples\","
+        insertTypingMode: 'instant'
+        insertTypingSpeed: 20
+      - action: waitForTimeout
+        timeout: 1000
+      - action: replace
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: 8
+        content: "        \"websiteUrl\": \"https://pnp.github.io/script-samples/\","
+        insertTypingMode: 'instant'
+        insertTypingSpeed: 20
+      - action: waitForTimeout
+        timeout: 1000
+      - action: replace
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: 9
+        content: "        \"privacyUrl\": \"https://github.com/pnp/script-samples\","
+        insertTypingMode: 'instant'
+        insertTypingSpeed: 20
+      - action: waitForTimeout
+        timeout: 1000
+      - action: replace
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: 10
+        content: "        \"termsOfUseUrl\": \"https://github.com/pnp/script-samples?tab=MIT-1-ov-file#readme\""
+        insertTypingMode: 'instant'
+        insertTypingSpeed: 20
+      - action: waitForTimeout
+        timeout: 2000
+      - action: highlight
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: 20:23
+      - action: replace
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: 21
+        content: "        \"short\": \"Agent for help to write and find PnP Script Samples\","
+        insertTypingMode: 'instant'
+        insertTypingSpeed: 20
+      - action: waitForTimeout
+        timeout: 1000
+      - action: replace
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: 22
+        content: "        \"full\": \"Agent for Copilot for Microsoft 365, is designed to assist users with PowerShell scripts related to PnP Script Samples. This agent reviews existing scripts, analyzes them for potential improvements, and helps build supporting documentation. By leveraging the capabilities of Microsoft 365 Copilot, the agent provides insightful suggestions and streamlines the development process, ensuring scripts are optimized and well-documented.\""
+        insertTypingMode: 'instant'
+        insertTypingSpeed: 20
+      - action: waitForTimeout
+        timeout: 1000
+      - action: unselect
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+      - action: positionCursor
+        path: "./Agent/PnP Script Samples Agent/appPackage/manifest.json"
+        position: end
