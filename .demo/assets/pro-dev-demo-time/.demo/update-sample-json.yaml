@@ -33,6 +33,8 @@ demos:
           args:
             query: "YOUR-SAMPLE-NAME"
             replace: "da-PnPScriptSamplesAgent"
+        - action: copyToClipboard
+          content: "da-PnPScriptSamplesAgent"
     - title: Highlight YOUR-SAMPLE-TITLE token
       steps:
         - action: highlight
@@ -48,6 +50,8 @@ demos:
           args:
             query: "YOUR-SAMPLE-TITLE"
             replace: "PnP Script Samples Agent"
+        - action: copyToClipboard
+          content: "PnP Script Samples Agent"
     - title: Update dates
       steps:
         - action: highlight
@@ -64,7 +68,7 @@ demos:
         - action: replace
           path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
           position: 13
-          content: "    \"updateDateTime\": \"2024-10-07\","
+          content: "    \"updateDateTime\": \"2025-08-07\","
           insertTypingMode: 'instant'
           insertTypingSpeed: 20
         - action: unselect
@@ -165,3 +169,8 @@ demos:
           timeout: 1000
         - action: unselect
           path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+    - title: Open the fork Repo
+      steps:
+       - action: openWebsite
+         url: https://github.com/pkbullock/copilot-pro-dev-samples
+         openInVSCode: false
