@@ -31,11 +31,6 @@ demos:
         insertTypingSpeed: 100
    - title: Copy the agent to Copilot Pro Dev Samples
      steps:
-      # - action: executeTerminalCommand
-      #   command: "cd Community-Demo-7th-Aug-2025"
-      #   autoExecute: true
-      #   insertTypingMode: instant
-      #   insertTypingSpeed: 100
       - action: executeTerminalCommand
         command: "cp -r 'Community-Demo-7th-Aug-2025/Agent/PnP Script Samples Agent' copilot-pro-dev-samples/Samples/"
         autoExecute: true
@@ -48,6 +43,11 @@ demos:
         insertTypingSpeed: 100
       - action: executeTerminalCommand
         command: "cp -r 'Community-Demo-7th-Aug-2025/.demo/assets/pro-dev-demo-time/.vscode' copilot-pro-dev-samples"
+        autoExecute: true
+        insertTypingMode: instant
+        insertTypingSpeed: 100
+      - action: executeTerminalCommand
+        command: "cp -r 'Community-Demo-7th-Aug-2025/.demo/assets/pro-dev-demo-time/ScriptSamplesPreview.png' copilot-pro-dev-samples/.demo"
         autoExecute: true
         insertTypingMode: instant
         insertTypingSpeed: 100

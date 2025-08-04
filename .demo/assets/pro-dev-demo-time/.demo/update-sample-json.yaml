@@ -111,6 +111,10 @@ demos:
           position: 36:41
         - action: waitForTimeout
           timeout: 1000
+        - action: copy
+          path: "./.demo/ScriptSamplesPreview.png"
+          dest: "./samples/da-PnPScriptSamplesAgent/assets"
+          overwrite: true
         - action: replace
           path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
           position: 39
