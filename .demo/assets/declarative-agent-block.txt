@@ -1,0 +1,38 @@
+    "capabilities": [
+        {
+            "name": "WebSearch",
+            "sites": [
+                {
+                    "url": "https://github.com/pnp/script-samples"
+                }
+            ]
+        },
+        {
+            "name": "GraphicArt"
+        }
+    ],
+    "conversation_starters": [
+        {
+            "title": "Find a script",
+            "text": "Please find a sample script on PnP Script Samples for"
+        },
+        {
+            "title": "Suggest a code sample",
+            "text": "Write a code sample for the following purpose: Find an item in SharePoint"
+        },
+        {
+            "title": "Contribution to PnP Script Samples",
+            "text": "How can I contribute to PnP Script Samples?"
+        }
+    ],
+    "disclaimer": {
+        "text": "This declarative agent and its samples are provided as is without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement."
+    },
+    "behavior_overrides": {
+        "suggestions": {
+            "disabled": true
+        },
+        "special_instructions": {
+            "discourage_model_knowledge": true
+        }
+    }

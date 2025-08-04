@@ -40,3 +40,20 @@ atk provision
 ```
 
 > Note: Auth Token cannot handle the codespaces environment. Sad face!
+
+
+### Demo in Copilot Pro Dev Samples (No Demo Time)
+
+> Note: Work around - copy the demo time files to the cloned repo
+
+
+- Find the new Sample
+- Create an assets folder
+- Copy in sample.json file
+- Update sample.json file
+	- Replace Placeholders
+
+- Update Readme.md
+	- Use Template, rename current to .old
+	- Copy template
+	- Copy fragments over to the sample

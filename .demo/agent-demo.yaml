@@ -104,6 +104,31 @@ demos:
     steps:
        - action: open
          path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+        
+       - action: highlight
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: 2
+       - action: replace
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: 2
+         content: "    \"$schema\": \"https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json\","
+         insertTypingMode: 'instant'
+         insertTypingSpeed: 20
+       - action: waitForTimeout
+         timeout: 1000
+       
+       - action: highlight
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: 3
+       - action: replace
+         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+         position: 3
+         content: "    \"version\": \"v1.5\","
+         insertTypingMode: 'instant'
+         insertTypingSpeed: 20
+       - action: waitForTimeout
+         timeout: 1000
+
        - action: highlight
          path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
          position: 5
@@ -115,9 +140,10 @@ demos:
          insertTypingSpeed: 20
        - action: waitForTimeout
          timeout: 1000
+
        - action: insert
          path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
-         position: "6"
+         position: 6
          content: "    \"instructions\": \"$[file('instruction.txt')]\",\n"
          insertTypingMode: 'instant'
          insertTypingSpeed: 20
@@ -127,28 +153,24 @@ demos:
          path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
        - action: insert
          path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
-         position: "7"
-         contentPath: "./.demo/assets/declarative-agent-capabilities.txt"
+         position: 7
+         contentPath: "./.demo/assets/declarative-agent-block.txt"
          insertTypingMode: 'instant'
          insertTypingSpeed: 20
-       - action: highlight
-         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
-         position: 7:25
-       - action: waitForTimeout
-         timeout: 2000
        - action: unselect
          path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
-       - action: insert
-         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
-         position: "26"
-         contentPath: "./.demo/assets/declarative-agent-conversation-starters.txt"
-         insertTypingMode: 'instant'
-         insertTypingSpeed: 20
-       - action: highlight
-         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
-         position: 26:39
-       - action: waitForTimeout
-         timeout: 2000
-       - action: unselect
-         path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
-       
+        
+  - title: Highlight Disclamer/Behaviours
+    description: Highlight sections of the declarativeAgent.json file with the new features.
+    steps:
+      - action: unselect
+        path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+      - action: highlight
+        path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"
+        position: 34:44
+
+  - title: Clear Highlight
+    description: Highlight sections of the declarativeAgent.json file with the new features.
+    steps:
+      - action: unselect
+        path: "./Agent/PnP Script Samples Agent/appPackage/declarativeAgent.json"        
