@@ -1,0 +1,21 @@
+title: Updating README.md
+description: 'Demonstration of a README.md updates'
+version: 2
+demos:
+    - title: Open README.md
+      steps:
+        - action: open
+          path: "./samples/da-PnPScriptSamplesAgent/README.md"
+    - title: Rename old README.md
+      steps:
+        - action: rename
+          path: "./samples/da-PnPScriptSamplesAgent/README.md"
+          dest: "./samples/da-PnPScriptSamplesAgent/README-OLD.md"
+    - title: Create new README.md from example
+      steps:
+        - action: create
+          path: "./samples/da-PnPScriptSamplesAgent/README.md"
+          contentPath: "./.demo/README.md"
+        
+        
+   
