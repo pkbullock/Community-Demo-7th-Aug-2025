@@ -11,7 +11,7 @@ demos:
          insertTypingSpeed: 100
        - action: executeTerminalCommand
          command: "mv 'PnP Script Samples Agent' da-PnPScriptSamplesAgent"
-         autoExecute: false
+         autoExecute: true
          insertTypingMode: instant
          insertTypingSpeed: 100
        - action: executeTerminalCommand
@@ -22,7 +22,7 @@ demos:
   - title: Create assets folder
     steps:
        - action: executeTerminalCommand
-         command: "md assets"
+         command: "mkdir assets"
          autoExecute: true
          insertTypingMode: instant
          insertTypingSpeed: 100
@@ -30,6 +30,6 @@ demos:
     steps:
        - action: executeTerminalCommand
          command: "cp ../../templates/sample-template.json assets/sample.json"
-         autoExecute: false
+         autoExecute: true
          insertTypingMode: instant
          insertTypingSpeed: 100
