@@ -1,0 +1,28 @@
+title: Slides
+description: ''
+version: 2
+demos:
+  - title: Welcome
+    description: ''
+    steps:
+      - action: openSlide
+        path: /.demo/slides/welcome.md
+    icons:
+      start: vm
+      end: pass-filled
+  - title: About Me
+    description: ''
+    steps:
+      - action: openSlide
+        path: /.demo/slides/about.md
+    icons:
+      start: vm
+      end: pass-filled
+  - title: Demo Time
+    description: ''
+    steps:
+      - action: openSlide
+        path: /.demo/slides/demo.md
+    icons:
+      start: vm
+      end: pass-filled
