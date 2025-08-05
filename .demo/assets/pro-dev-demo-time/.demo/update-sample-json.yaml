@@ -35,13 +35,12 @@ demos:
             replace: "da-PnPScriptSamplesAgent"
         - action: copyToClipboard
           content: "da-PnPScriptSamplesAgent"
+        - action: waitForTimeout
+          timeout: 1000
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
     - title: Highlight YOUR-SAMPLE-TITLE token
       steps:
-        - action: highlight
-          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
-          position: 5
-        - action: waitForTimeout
-          timeout: 1500
         - action: highlight
           path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
           position: 5
@@ -52,6 +51,33 @@ demos:
             replace: "PnP Script Samples Agent"
         - action: copyToClipboard
           content: "PnP Script Samples Agent"
+        - action: waitForTimeout
+          timeout: 1000
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+
+    - title: Update YOUR-SHORT-DESCRIPTION
+      steps:
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 6
+        - action: waitForTimeout
+          timeout: 1500
+        - action: highlight
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+          position: 10
+        - action: executeVSCodeCommand
+          command: 'editor.action.startFindReplaceAction'
+          args:
+            query: "YOUR-SHORT-DESCRIPTION"
+            replace: "PnP Script Samples Agent"
+        - action: copyToClipboard
+          content: "Agent for Copilot for Microsoft 365, is designed to assist users with PowerShell scripts related to PnP Script Samples."
+        - action: waitForTimeout
+          timeout: 1000
+        - action: unselect
+          path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
+
     - title: Update dates
       steps:
         - action: highlight
@@ -112,13 +138,13 @@ demos:
         - action: waitForTimeout
           timeout: 1000
         - action: copy
-          path: "./.demo/ScriptSamplesPreview.png"
-          dest: "./samples/da-PnPScriptSamplesAgent/assets"
+          path: "./.demo/script-samples-preview.png"
+          dest: "./samples/da-PnPScriptSamplesAgent/assets/script-samples-preview.png"
           overwrite: true
         - action: replace
           path: "./samples/da-PnPScriptSamplesAgent/assets/sample.json"
           position: 39
-          content: "        \"url\": \"https://github.com/pnp/copilot-pro-dev-samples/raw/main/templates/pending-image.png\","
+          content: "        \"url\": \"https://github.com/pnp/copilot-pro-dev-samples/raw/main/samples/da-PnPScriptSamplesAgent/assets/script-samples-preview.png\","
           insertTypingMode: 'instant'
           insertTypingSpeed: 20
         - action: waitForTimeout
