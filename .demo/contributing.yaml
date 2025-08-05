@@ -32,7 +32,7 @@ demos:
    - title: Copy the agent to Copilot Pro Dev Samples
      steps:
       - action: executeTerminalCommand
-        command: "cp -r 'Community-Demo-7th-Aug-2025/Agent/PnP Script Samples Agent' copilot-pro-dev-samples/Samples/"
+        command: "cp -r 'Community-Demo-7th-Aug-2025/Agent/PnP Script Samples Agent' copilot-pro-dev-samples/samples/"
         autoExecute: true
         insertTypingMode: instant
         insertTypingSpeed: 100
