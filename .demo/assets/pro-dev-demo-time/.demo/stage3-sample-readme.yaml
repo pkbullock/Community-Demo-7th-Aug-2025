@@ -1,4 +1,4 @@
-title: Updating README.md
+title: Stage 3 - Updating README.md
 description: 'Demonstration of a README.md updates'
 version: 2
 demos:
@@ -16,6 +16,3 @@ demos:
         - action: create
           path: "./samples/da-PnPScriptSamplesAgent/README.md"
           contentPath: "./.demo/README.md"
-        
-        
-   

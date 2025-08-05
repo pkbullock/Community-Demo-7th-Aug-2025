@@ -46,16 +46,6 @@ demos:
         autoExecute: true
         insertTypingMode: instant
         insertTypingSpeed: 100
-      - action: executeTerminalCommand
-        command: "cp -r 'Community-Demo-7th-Aug-2025/.demo/assets/pro-dev-demo-time/script-samples-preview.png' copilot-pro-dev-samples/.demo"
-        autoExecute: true
-        insertTypingMode: instant
-        insertTypingSpeed: 100
-      - action: executeTerminalCommand
-        command: "cp -r 'Community-Demo-7th-Aug-2025/.demo/assets/pro-dev-demo-time/README.md' copilot-pro-dev-samples/.demo"
-        autoExecute: true
-        insertTypingMode: instant
-        insertTypingSpeed: 100
    - title: Navigate to the cloned repo
      steps:
       - action: executeTerminalCommand
