@@ -21,11 +21,6 @@ demos:
         insertTypingSpeed: 100
       - action: executeTerminalCommand
         command: git clone https://github.com/pkbullock/copilot-pro-dev-samples.git
-        autoExecute: false
-        insertTypingMode: instant
-        insertTypingSpeed: 100
-      - action: executeTerminalCommand
-        command: dir
         autoExecute: true
         insertTypingMode: instant
         insertTypingSpeed: 100
