@@ -9,7 +9,7 @@ By leveraging the capabilities of Microsoft 365 Copilot, the agent provides insi
 
 ## Contributors
 
-* [Paul Bullock](https://github.com/pkbuullock)
+* [Paul Bullock](https://github.com/pkbullock)
 
 ## Version history
 
